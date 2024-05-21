@@ -15,7 +15,8 @@ COPY ./public ./public
 RUN npm install \
     && npm install -g serve \
     && npm run build \
-    && rm -fr node_modules
+    && rm -fr node_modules \
+    && mkdir -p /app
 
 EXPOSE 3000
 
